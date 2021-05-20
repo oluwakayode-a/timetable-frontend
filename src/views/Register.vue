@@ -139,6 +139,7 @@ export default {
          this.$store.dispatch('userRegister', userData)
          .then(response => {
             console.log(response)
+            this.$store.commit('updateSnackbar', {show : true, message: "Registered successfully. Log in."})
             this.$router.push({path : 'login'})
          })
          .catch(error => {

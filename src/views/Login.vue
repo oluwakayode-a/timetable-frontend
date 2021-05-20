@@ -90,7 +90,6 @@ export default {
          if (!this.$v.$error) {
             this.login()
             this.clear()
-            this.$store.commit('updateSnackbar', {show : true, message: "Logged in successfully."})
          }
       },
       clear() {
@@ -107,12 +106,14 @@ export default {
          this.$store.dispatch("userLogin", userData)
          .then(() => {
             // console.log(response.data)
+            this.$store.commit('updateSnackbar', {show : true, message: "Logged in successfully."})
             this.$router.push({path: '/'})
          })
          .catch(error => {
             console.log(error)
             this.incorrectAuth = true;
          })
+         .finally(() => this.loading = false)
 
          this.username = ""
          this.password = ""
