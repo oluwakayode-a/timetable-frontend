@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const getAPI = axios.create({
-    baseURL: 'http://localhost:8000/api/',
+    baseURL: 'https://k-timetable-backend.herokuapp.com/api/',
     timeout: 10000,
 })
 
