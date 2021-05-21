@@ -176,6 +176,7 @@ export default {
                         }
                     }
                 })
+                .catch(error => console.log(error))
                 // update entry
             } else {
                 // New entry

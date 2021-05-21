@@ -119,7 +119,6 @@ export default {
          this.$v.$touch();
          if (!this.$v.$error) {
             this.register()
-            this.$store.commit('updateSnackbar', {show : true, message: "Registered successfully."})
             this.clear()
          }
       },
@@ -131,6 +130,8 @@ export default {
       },
       register() {
          this.loading = true
+         this.errorMessage = {}
+         
          const userData = {
             username : this.username,
             email: this.email,
