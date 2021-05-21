@@ -99,6 +99,8 @@ export default {
       },
       login() {
          this.loading = true
+         this.incorrectAuth = false
+         
          const userData = {
             username : this.username,
             password : this.password
