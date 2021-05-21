@@ -36,6 +36,7 @@ export default {
   props: {
     title: String,
     table_id: Number,
+    fetchTables: Function,
   },
   data() {
     return {
@@ -56,6 +57,9 @@ export default {
         this.$destroy();
         this.$el.parentNode.removeChild(this.$el);
         this.$store.commit('updateSnackbar', {show : true, message: "Table deleted."})
+
+        // Reload Tables.
+        this.$props.fetchTables()
       })
       .catch(error => console.log(error))
     },

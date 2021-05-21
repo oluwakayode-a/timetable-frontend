@@ -6,7 +6,7 @@
       <v-container class="my-2" fluid>
         <v-row>
           <v-col lg="4" md="6" sm="12" v-for="(table, index) in tables" :key="index">
-            <Card :title="table.title" :table_id="table.id" />
+            <Card :title="table.title" :table_id="table.id" :fetchTables="fetchTables" />
           </v-col>
 
           <v-col v-if="tables.length == 0">

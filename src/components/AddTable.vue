@@ -18,7 +18,7 @@
         <v-text-field
           name="table_length"
           type="number"
-          label="Number of Rows"
+          label="Number of Columns"
           v-model="table_length"
           :error-messages="tableLengthErrors"
           @blur="$v.table_length.$touch()"
@@ -43,7 +43,7 @@
       <v-col>
         <v-text-field
           name="interval"
-          label="Time interval (Minutes per row)"
+          label="Time interval (in minutes)"
           :error-messages="timeIntervalErrors"
           @blur="$v.time_interval.$touch()"
           @input="$v.time_interval.$touch()"
