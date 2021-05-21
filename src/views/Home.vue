@@ -50,6 +50,8 @@ export default {
   methods: {
     fetchTables() {
       this.loading = true;
+      this.showForm = false;
+      
         getAPI.get("/timetable/", {
         headers: {
         'Authorization' :  `Token ${this.$store.state.token}`
