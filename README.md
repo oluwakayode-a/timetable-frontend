@@ -1,4 +1,5 @@
 # timetable
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fbdc4a62-60f9-43d9-b67f-003e5cf8a240/deploy-status)](https://app.netlify.com/sites/k-timetable/deploys)
 
 ## Project setup
 ```
